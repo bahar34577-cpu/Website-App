@@ -1,0 +1,691 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff5f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #ff4d94, #ff1a75);
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 15px rgba(255, 77, 148, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 28px;
+    color: white;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nmid-badge {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    backdrop-filter: blur(5px);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    color: #ff1a75;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 1s ease-out;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    color: #666;
+    margin-bottom: 15px;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.instruction {
+    font-size: 1.2rem;
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ff1a75;
+    animation: bounce 2s infinite;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+.scroll-indicator i {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero-decoration {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.pink-circle {
+    position: absolute;
+    background: radial-gradient(circle, rgba(255, 77, 148, 0.1) 0%, rgba(255, 77, 148, 0) 70%);
+    border-radius: 50%;
+}
+
+.pink-circle.large {
+    width: 400px;
+    height: 400px;
+    top: 10%;
+    left: 5%;
+}
+
+.pink-circle.medium {
+    width: 300px;
+    height: 300px;
+    bottom: 15%;
+    right: 10%;
+}
+
+.pink-circle.small {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    left: 15%;
+}
+
+/* QRIS Section */
+.qris-section {
+    padding: 80px 20px;
+    background-color: white;
+    border-radius: 40px 40px 0 0;
+    box-shadow: 0 -10px 30px rgba(255, 77, 148, 0.1);
+    position: relative;
+    margin-top: -40px;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    color: #ff1a75;
+    text-align: center;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.section-title i {
+    font-size: 2.5rem;
+}
+
+.qris-container {
+    background-color: #fff9fc;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(255, 77, 148, 0.15);
+    max-width: 700px;
+    margin: 0 auto 60px;
+    border: 2px solid #ffd9e9;
+}
+
+.qris-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px dashed #ffb3d9;
+}
+
+.qris-header h3 {
+    font-size: 1.8rem;
+    color: #ff1a75;
+    margin-bottom: 8px;
+}
+
+.merchant-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.qris-code {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.qris-frame {
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffcce0;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* PERBESAR UKURAN QRIS - SEMAKIN BESAR */
+.qris-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    border: 1px solid #ffb3d9;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.qris-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 26, 117, 0.2);
+}
+
+.size-indicator {
+    font-size: 1rem;
+    color: #ff1a75;
+    margin-top: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.qris-details {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border: 1px solid #ffd9e9;
+}
+
+.detail-item {
+    display: flex;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.detail-label {
+    font-weight: 600;
+    min-width: 120px;
+    color: #666;
+}
+
+.detail-value {
+    color: #333;
+    flex: 1;
+}
+
+.detail-value.nmid {
+    font-weight: 700;
+    color: #ff1a75;
+    font-size: 1.1rem;
+}
+
+.detail-value a {
+    color: #ff1a75;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.detail-value a:hover {
+    text-decoration: underline;
+    color: #ff4d94;
+}
+
+.info-footer {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px dashed #ffb3d9;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.info-footer p {
+    margin-bottom: 5px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.download-btn, .share-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    min-width: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #ff4d94, #ff1a75);
+    color: white;
+    box-shadow: 0 6px 20px rgba(255, 77, 148, 0.4);
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 77, 148, 0.5);
+}
+
+.download-btn:active {
+    transform: translateY(-1px);
+}
+
+.download-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.share-btn {
+    background-color: white;
+    color: #ff1a75;
+    border: 2px solid #ff4d94;
+}
+
+.share-btn:hover {
+    background-color: #fff0f7;
+    transform: translateY(-3px);
+}
+
+.instructions {
+    background-color: #fff0f7;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-left: 5px solid #ff4d94;
+}
+
+.instructions h3 {
+    font-size: 1.6rem;
+    color: #ff1a75;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.instructions ol {
+    margin-left: 20px;
+    font-size: 1.1rem;
+}
+
+.instructions li {
+    margin-bottom: 12px;
+    padding-left: 10px;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #ff1a75, #e6005c);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 500px;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 20px;
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 2000;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.toast-content i {
+    font-size: 24px;
+}
+
+/* QRIS Modal */
+.qris-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.qris-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.qris-modal.active .modal-content {
+    transform: scale(1);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ff1a75;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    background: #ff4d94;
+    transform: scale(1.1);
+}
+
+.modal-qris {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin: 20px 0;
+    border: 2px solid #ffcce0;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .qris-image {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .qris-container {
+        padding: 30px 20px;
+        max-width: 90%;
+    }
+    
+    .qris-image {
+        max-width: 320px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .download-btn, .share-btn {
+        width: 100%;
+        min-width: unset;
+    }
+    
+    .detail-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .detail-label {
+        min-width: unset;
+    }
+    
+    header .container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .nmid-badge {
+        margin-top: 5px;
+    }
+    
+    .modal-content {
+        padding: 20px;
+    }
+    
+    .modal-qris {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .qris-container {
+        padding: 25px 15px;
+    }
+    
+    .qris-image {
+        max-width: 280px;
+    }
+    
+    .instructions {
+        padding: 20px;
+    }
+    
+    .download-btn, .share-btn {
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+    
+    .toast {
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+        text-align: center;
+    }
+}
