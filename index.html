@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRIS Static - LIVIAA AESTHETIC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💳</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-qrcode logo-icon"></i>
+                <span class="logo-text">LIVIAA AESTHETIC QRIS</span>
+            </div>
+            <div class="nmid-badge">
+                NMIID: ID1025459289092
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hallo!</h1>
+                <p class="subtitle">Selamat datang di halaman pembayaran LIVIAA AESTHETIC.</p>
+                <p class="instruction">Silakan scroll ke bawah untuk melihat QRIS yang dapat Anda gunakan untuk melakukan pembayaran.</p>
+                
+                <div class="scroll-indicator">
+                    <i class="fas fa-chevron-down"></i>
+                    <span>Scroll ke bawah</span>
+                </div>
+            </div>
+            
+            <div class="hero-decoration">
+                <div class="pink-circle large"></div>
+                <div class="pink-circle medium"></div>
+                <div class="pink-circle small"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QRIS Section -->
+    <section class="qris-section" id="qris">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-qrcode"></i>
+                QRIS Pembayaran
+            </h2>
+            
+            <div class="qris-container">
+                <div class="qris-header">
+                    <h3>SATU QRIS UNTUK SEMUA</h3>
+                    <p class="merchant-name">LIVIAA AESTHETIC</p>
+                </div>
+                
+                <div class="qris-code">
+                    <!-- QRIS Code Image - Ukuran Besar -->
+                    <div class="qris-frame">
+                        <img src="https://image2url.com/r2/default/images/1770275791720-bfeed500-7584-471f-b7d8-8975534de1c8.png" 
+                             alt="QRIS Code LIVIAA AESTHETIC" 
+                             class="qris-image" 
+                             id="qrisImage">
+                        <div class="size-indicator">
+                            <i class="fas fa-expand-alt"></i> 
+                            QRIS Besar untuk Mudah di-Scan
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="qris-details">
+                    <div class="detail-item">
+                        <span class="detail-label">NMIID:</span>
+                        <span class="detail-value nmid">ID1025459289092</span>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-label">Status:</span>
+                        <span class="detail-value">SATU QRIS UNTUK SEMUA</span>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-label">Verifikasi:</span>
+                        <span class="detail-value">Cek aplikasi penyelenggara di: <a href="https://www.aspi-qris.id" target="_blank">www.aspi-qris.id</a></span>
+                    </div>
+                    
+                    <div class="info-footer">
+                        <p>Dicetak oleh: 93600914</p>
+                        <p>Versi cetak: V0.0.2025.11.29</p>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="download-btn" id="downloadBtn">
+                        <i class="fas fa-download"></i>
+                        Download QRIS (Ukuran Besar)
+                    </button>
+                    
+                    <button class="share-btn" id="shareBtn">
+                        <i class="fas fa-share-alt"></i>
+                        Bagikan
+                    </button>
+                </div>
+            </div>
+            
+            <div class="instructions">
+                <h3><i class="fas fa-info-circle"></i> Cara Pembayaran:</h3>
+                <ol>
+                    <li>Buka aplikasi mobile banking atau e-wallet Anda</li>
+                    <li>Pilih menu "Bayar" atau "Scan QR"</li>
+                    <li>Arahkan kamera ke kode QR di atas (ukuran besar, mudah untuk scanning)</li>
+                    <li>Masukkan nominal pembayaran dan konfirmasi</li>
+                    <li>Simpan bukti pembayaran untuk referensi</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-qrcode"></i>
+                    <span>LIVIAA AESTHETIC</span>
+                </div>
+                <p class="footer-text">Pembayaran digital yang aman dan terpercaya</p>
+                <p class="copyright">© 2025 LIVIAA AESTHETIC QRIS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <span class="toast-message">QRIS berhasil didownload!</span>
+        </div>
+    </div>
+
+    <!-- QRIS Modal -->
+    <div class="qris-modal" id="qrisModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <img src="https://image2url.com/r2/default/images/1770275791720-bfeed500-7584-471f-b7d8-8975534de1c8.png" alt="QRIS Zoom" class="modal-qris">
+            <p>QRIS LIVIAA AESTHETIC - Tampilan Zoom</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
